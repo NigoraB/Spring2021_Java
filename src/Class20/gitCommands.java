@@ -13,7 +13,8 @@ public class gitCommands {
      * git checkout branchName
      *
      *
-     * 
+     * To delete branch locally
+     * git branch -d branchName
      *
      */
 }
