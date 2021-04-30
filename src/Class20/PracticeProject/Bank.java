@@ -16,6 +16,33 @@ public class Bank {
      *      In this class, we will never create object of Accounts class.
      *      In this class, we will never use methods/variables of Accounts class.
      *      In this class, we will using Customer class.
-     *      In this class, one customer object means 1 customer
+     *      In this class, creating one customer object means creating a customer
+     *
+     *      To create Customer,
+     *          customer has to enter 3 data
+     *             1. Name
+     *             2. SSN
+     *             3. Type of account they want to open (Savings, Checking)
+     *
+     *          customer can enter 4 data
+     *             1. Name
+     *             2. SSN
+     *             3. Address
+     *             4. Type of account they want to open (Savings, Checking)
+     *
+     *      When creating object of Customer class,
+     *          if all data is given this should create an account as well.
+     *
+     *             Customer c1 = new Customer("name", 1234, "Savings");
+     *                  show:
+     *                      Congratulations for your new account.
+     *                      Account number: 0909
+     *
+     *             c1.showAllAccountBalance();
+     *                  show:
+     *                      You have total 1 account.
+     *                      Account number:
+     *                      Balance:
+     *
      */
 }
