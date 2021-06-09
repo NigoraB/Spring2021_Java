@@ -28,16 +28,16 @@ public class JavaOperators_Logical {
          * We use logical operators to join two or more conditions.
          * Final result will always be a boolean datatype.
          *
-         * && operator ->
+         * && operator (and operator) ->
          *  all combined conditions must be true to get final result as true.
          *  If any one of the conditions is false, final result is false.
          *
-         * || operator ->
+         * || operator (or operator) ->
          *  any one of the combined conditions is to be true to get final result as true.
          *  If all conditions are false, then only final result will be false.
          *
          *
-         *  ! operator ->
+         *  ! operator (not operator) ->
          *      not operator will make true as false and vice-versa.
          *
          *

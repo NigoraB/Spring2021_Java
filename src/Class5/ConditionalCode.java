@@ -40,6 +40,7 @@ public class ConditionalCode {
                 // if
                 // block
             } else {
+                // java enters in else when all if-blocks are false
                 // else
                 // block
             }

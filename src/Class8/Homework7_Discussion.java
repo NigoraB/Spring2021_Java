@@ -1,5 +1,7 @@
 package Class8;
 
+import java.util.HashMap;
+
 public class Homework7_Discussion {
     public static void main(String[] args) {
         // Due: Mar 18, 2021
@@ -122,6 +124,62 @@ public class Homework7_Discussion {
         System.out.println("Reverse sentence3 : " + reverseSentence3);  // syadiloh yppah
 
 
+        String inputString = "I am the best of bests";
+        String reverseString = "";
+        int stringLength = inputString.length();
+        String[] inputStringArray = inputString.trim().split(" ");
+        for (int i = inputStringArray.length-1 ; i >= 0 ; i--) {
+            reverseString = reverseString + inputStringArray[i] + " ";
+        }
+        System.out.println(reverseString.trim());
+
+        findLongestSubstring("abcdefghedijaklkijghgstdgdgdgd");
 
     }
+
+
+    public String reverseString(String inputString) {
+        String reverseString = "";
+        int stringLength = inputString.length();
+        String[] inputStringArray = new String[stringLength];
+        for (int i = inputStringArray.length-1 ; i >= 0 ; i--) {
+            reverseString = reverseString + inputStringArray[i];
+        }
+        return reverseString;
+    }
+
+    public static String findLongestSubstring(String str)
+    {
+        int i;
+        int n = str.length();
+
+        int st = 0, currlen = 0, maxlen = 0, start = 0;
+
+        HashMap<Character, Integer> pos = new HashMap<>();
+
+        pos.put(str.charAt(0), 0);
+
+        for (i = 1; i < n; i++) {
+            if (!pos.containsKey(str.charAt(i))) {
+                pos.put(str.charAt(i), i);
+            } else {
+                if (pos.get(str.charAt(i)) >= st) {
+                    currlen = i - st;
+                    if (maxlen < currlen) {
+                        maxlen = currlen;
+                        start = st;
+                    }
+                    st = pos.get(str.charAt(i)) + 1;
+                }
+                pos.replace(str.charAt(i), i);
+            }
+        }
+        if (maxlen < i - st) {
+            maxlen = i - st;
+            start = st;
+        }
+        System.out.println(str.substring(start, start + maxlen));
+        return str.substring(start, start + maxlen);
+    }
+
 }

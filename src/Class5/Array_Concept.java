@@ -37,16 +37,18 @@ public class Array_Concept {
          *
          * This to know before creating an Array:
          * 1. What will be the datatype of values you are going to store.
-         * 2. Total number of values that you need to store.
+         * 2. a) Total number of values that you need to store.
          *      OR
-         *    All the values that you want to store in array.
+         *    b) All the values that you want to store in array.
          *
          * Want to create an array to store names of top-5 students of this batch?
          *
-         * Syntax:
-         * datatype[] arrName = new datatype[count];
-         * OR
-         * datatype[] arrName = {value1, value2, value3, value4, value2, value4};
+         * Syntax to create an array
+         *  if 1 and 2a
+         *  datatype[] arrName = new datatype[totalNumber];
+         *
+         *  if 1 and 2b
+         *  datatype[] arrName = {value1, value2, value3, value4, value5};
          *
          *
          */
@@ -80,6 +82,13 @@ public class Array_Concept {
         // shortcut to print an array
         System.out.println(Arrays.toString(myBills));
 
+        // myBills[5] = 10.23;  When index is out of the valid range, user get ArrayIndexOutOfBoundsException
+
+        // How to print value from a specific index
+        // print value at index-3
+            /*
+                myBills[3] --> represents the value at index-3
+             */
         System.out.println(myBills[3]);
 
         // Store the value at index-2 in new variable(foodBill)

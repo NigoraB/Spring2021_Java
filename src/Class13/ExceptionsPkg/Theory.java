@@ -1,5 +1,8 @@
 package Class13.ExceptionsPkg;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Arrays;
 
 public class Theory {
@@ -24,7 +27,7 @@ public class Theory {
          *  try {
          *      // code which
          *      // can throw exceptions
-         *  } catch (Exception-1) {
+         *  } catch (Exception-1 | Exception-4 e) {
          *      // code to execute if Exception-1 occurs
          *  } catch (Exception-2) {
          *      // code to execute if Exception-2 occurs

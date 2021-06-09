@@ -8,7 +8,7 @@ public class String_Concept_2 {
         String cityName = "New YoRk";   // 8
 
         /**
-         * to find if a particular sequence is present in the string
+         * to find if a particular sequence is exactly present in the string
          * Method: contains()
          * Returns: boolean
          */

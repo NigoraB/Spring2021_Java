@@ -15,6 +15,10 @@ public class MyMainClass {
 
         cc1.printParentName();
 
+        // PClass p1 = new CClass();   // Allowed
+
+        // CClass c1 = new PClass();   // Compile time error
+
 
 
     }

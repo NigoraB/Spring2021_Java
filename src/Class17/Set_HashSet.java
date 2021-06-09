@@ -7,7 +7,7 @@ public class Set_HashSet {
     public static void main(String[] args) {
 
         /**
-         * Set: It's datatype which can store multiple values, BIT NO duplicates.
+         * Set: It's datatype which can store multiple values, BUT NO duplicates.
          *
          * HashSet never maintains the order of insertion.
          * Hashing is technique to use memory space efficiently.

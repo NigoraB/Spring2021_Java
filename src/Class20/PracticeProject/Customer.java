@@ -1,6 +1,63 @@
 package Class20.PracticeProject;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Customer {
+
+    // To store all accounts object for a customer
+    private List<Accounts> allAccountsObjects = new ArrayList<>();
+    private String name, ssn, address;
+
+    public Customer() {
+        Accounts acc = new Accounts();
+        acc.createAccount("savings");
+        allAccountsObjects.add(acc);
+        System.out.println("\nsavings account successfully created");
+        System.out.println("New Account number : " + acc.getAccountNumber());
+        System.out.println("Balance : " + acc.getAccountBalance());
+    }
+
+//    public Customer() {
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Please enter name : ");
+//        name = input.next();
+//        System.out.println("Please enter ssn : ");
+//        ssn = input.next();
+//        System.out.println("Would you like to enter your address : ");
+//        if (input.next().equalsIgnoreCase("yes")) {
+//            System.out.println("Please enter your address : " );
+//            address = input.next();
+//        }
+//        System.out.println("Please enter account type : ");
+//        String type = input.next();
+//        Accounts acc = new Accounts();
+//        acc.createAccount(type);
+//        allAccountsObjects.add(acc);
+//        System.out.println("New Account number : " + acc.getAccountNumber());
+//        System.out.println("Balance : " + acc.getAccountBalance());
+//    }
+
+    public void createAccount() {
+        Accounts acc = new Accounts();
+        allAccountsObjects.add(acc);
+        acc.createAccount("checking");
+        System.out.println("\nchecking account successfully created");
+        System.out.println("New Account number : " + acc.getAccountNumber());
+        System.out.println("Balance : " + acc.getAccountBalance());
+    }
+
+    public void showAllAccountBalance() {
+        // [acc1, acc2]
+        System.out.println("\nYou have total " + allAccountsObjects.size() + " accounts");
+        for (Accounts acc : allAccountsObjects) {
+            System.out.println("Account Type: " + acc.getAccountType());
+            System.out.println("Account Number : " + acc.getAccountNumber());
+            System.out.println("Balance : " + acc.getAccountBalance());
+        }
+    }
+
     /**
      * Customer ->
      *      Name
@@ -54,4 +111,16 @@ public class Customer {
      *                  Your updated balance: $NNNN.MM
      *
      */
+    public void makeDeposit(double amount) {
+        // deposit of Accounts class
+    }
+
+    public Customer(String cName, String cSsn, String cType) {
+        Accounts acc = new Accounts();
+        acc.createAccount(cType);
+        allAccountsObjects.add(acc);
+        System.out.println("Congratulations for your new account.");
+        System.out.println("Account number : " + acc.getAccountNumber());
+    }
+
 }

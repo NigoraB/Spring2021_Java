@@ -1,6 +1,24 @@
 package Class20.PracticeProject;
 
 public class Bank {
+    public static void main(String[] args) {
+
+//        Customer c1 = new Customer();
+//        c1.createAccount();
+//        c1.showAllAccountBalance();
+
+        Customer c1 = new Customer("Happy", "1234", "savings");
+
+        c1.createAccount();
+
+        c1.showAllAccountBalance();
+
+
+        Customer c = new Customer();
+
+
+
+    }
 
     /**
      *
@@ -45,4 +63,6 @@ public class Bank {
      *                      Balance:
      *
      */
+
+
 }
